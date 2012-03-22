@@ -127,7 +127,7 @@
 						</FontString>
 					</Layer>
 					<Layer level="OVERLAY">
-						<Texture name="AccountLoginLogo" file="Interface\Glues\Common\Glues-WoW-CCLogo">
+						<Texture name="AccountLoginLogo" file="Interface\Glues\Common\Glues-WoW-MPLogo">
 							<Size>
 								<AbsDimension x="256" y="128"/>
 							</Size>
@@ -488,8 +488,8 @@
 						</Anchors>
 						<Scripts>
 							<OnShow>
-								if (tonumber(GetCVar("blizzcon")) == 1) then
-								  self:Disable();
+								if (IsBlizzCon()) then
+									self:Disable();
 								else
 									self:Enable();
 								end

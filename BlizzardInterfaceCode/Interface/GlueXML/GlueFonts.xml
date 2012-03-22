@@ -40,6 +40,28 @@
 			<AbsValue val="12"/>
 		</FontHeight>
 	</Font>
+	<Font name="SystemFont_Shadow_Outline_Med2" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="0"/>
+		</Shadow>
+		<FontHeight>
+			<AbsValue val="13"/>
+		</FontHeight>
+	</Font>
+	<Font name="SystemFont_Shadow_Outline_Med3" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="0"/>
+		</Shadow>
+		<FontHeight>
+			<AbsValue val="15"/>
+		</FontHeight>
+	</Font>
 	<Font name="SystemFont_Outline_Med2" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
 		<FontHeight>
 			<AbsValue val="15"/>
@@ -178,9 +200,26 @@
 			<AbsValue val="18"/>
 		</FontHeight>
 	</Font>
+	<Font name="FactionName_Shadow_Gigantic" font="Fonts\MORPHEUS.ttf" outline="NORMAL" virtual="true">
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="0"/>
+		</Shadow>
+		<Color r="1.0" g="1.0" b="1.0"/>
+		<FontHeight>
+			<AbsValue val="22"/>
+		</FontHeight>
+	</Font>	
 	<Font name="QuestFont_Large" font="Fonts\MORPHEUS.ttf" virtual="true">
 		<FontHeight>
 			<AbsValue val="15"/>
+		</FontHeight>
+	</Font>
+	<Font name="QuestFont_Huge" font="Fonts\MORPHEUS.ttf" virtual="true">
+		<FontHeight>
+			<AbsValue val="18"/>
 		</FontHeight>
 	</Font>
 </Ui>

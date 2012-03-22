@@ -8,7 +8,7 @@
 	<Frame name="CreditsFrame" toplevel="true" parent="GlueParent" setAllPoints="true" enableKeyboard="true" hidden="true">
 		<Layers>
 			<Layer level="OVERLAY">
-				<Texture name="CreditsLogo" file="Interface\Glues\Common\Glues-WoW-CCLogo">
+				<Texture name="CreditsLogo" file="Interface\Glues\Common\Glues-WoW-MPLogo">
 					<Size>
 						<AbsDimension x="256" y="128"/>
 					</Size>

@@ -18,11 +18,14 @@ AUTO_DRAG_TIME = 0.5;				-- in seconds
 
 local translationTable = { };	-- for character reordering: key = button index, value = character ID
 
+BLIZZCON_IS_A_GO = false;
+
 CHARACTER_SELECT_LOGOS = {
 	TRIAL = "Interface\\Glues\\Common\\Glues-WoW-StarterLogo",
 	[1] = "Interface\\Glues\\Common\\Glues-WoW-ClassicLogo",
 	[2] = "Interface\\Glues\\Common\\Glues-WoW-WotLKLogo",
 	[3] = "Interface\\Glues\\Common\\Glues-WoW-CCLogo",
+	[4] = "Interface\\Glues\\Common\\Glues-WoW-MPLogo",
 	--When adding entries to here, make sure to update the zhTW and zhCN localization files.
 };
 
@@ -184,6 +187,10 @@ function CharacterSelect_OnShow()
 	GlueDropDownMenu_SetSelectedValue(AddonCharacterDropDown, ALL);
 
 	AccountUpgradePanel_Update(CharSelectAccountUpgradeButton.isExpanded);
+
+	if( IsBlizzCon() ) then
+		CharacterSelectUI:Hide();
+	end
 end
 
 function CharacterSelect_OnHide(self)
@@ -302,6 +309,13 @@ function CharacterSelect_OnEvent(self, event, ...)
 		end
 		UpdateCharacterList();
 		CharSelectCharacterName:SetText(GetCharacterInfo(GetCharIDFromIndex(self.selectedIndex)));
+		if (IsBlizzCon()) then
+			if (BLIZZCON_IS_A_GO) then
+				EnterWorld();
+			else
+				SetGlueScreen("charcreate");
+			end
+		end
 	elseif ( event == "UPDATE_SELECTED_CHARACTER" ) then
 		local charID = ...;
 		if ( charID == 0 ) then

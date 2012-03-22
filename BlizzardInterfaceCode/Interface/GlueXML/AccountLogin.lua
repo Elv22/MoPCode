@@ -30,6 +30,14 @@ function AccountLogin_OnLoad(self)
 end
 
 function AccountLogin_OnShow(self)
+	-- special code for BlizzCon
+	if (IsBlizzCon()) then
+		local account = GetCVar("accountName");
+		DefaultServerLogin(account, "blizzcon11");
+		AccountLoginUI:Hide();
+		return;
+	end
+
 	self:SetSequence(0);
 	PlayGlueMusic(CurrentGlueMusic);
 	PlayGlueAmbience(GlueAmbienceTracks["DARKPORTAL"], 4.0);

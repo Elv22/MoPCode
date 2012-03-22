@@ -167,4 +167,25 @@
 	<Font name="QuestFontNormalLarge" inherits="QuestFont_Large" virtual="true">
 		<Color r="1.0" g="0.82" b="0.0"/>
 	</Font>
+	<Font name="QuestFontNormalHuge" inherits="QuestFont_Huge" virtual="true">
+		<Color r="1.0" g="0.82" b="0.0"/>
+	</Font>
+	<Font name="GlueClassFont" inherits="SystemFont_Shadow_Outline_Med2" virtual="true">
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="0"/>
+		</Shadow>
+		<Color r="1.0" g="0.78" b="0"/>
+	</Font>
+	<Font name="GlueCustomizationFont" inherits="SystemFont_Shadow_Outline_Med3" virtual="true">
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="0"/>
+		</Shadow>
+		<Color r="0.4" g="0.4" b="0.4"/>
+	</Font>
 </Ui>
